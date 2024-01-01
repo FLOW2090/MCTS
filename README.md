@@ -2,7 +2,7 @@
 
 ## 游戏规则
 
-![layout.jpg](https://github.com/FLOW2090/CODE_CPP/blob/main/ComputationnalThinking/layout.jpg)
+![layout.jpg](https://github.com/FLOW2090/MCTS/blob/main/display.jpg)
 
 “超级井字棋”的特点可概括为将九个井字棋游戏内嵌入一个作为主体的井字棋游戏中，并且在对局中也反复使用其嵌套的特性。具体而言，它的棋盘是在传统的 $3 \times 3$ 网格基础上，把每一大格再划分为 $3 \times 3$ 的小网格。规则如下：
 
@@ -14,7 +14,7 @@
     2. 第一子可落在任意一个小网格中。
     3. 从第二子开始，根据上一个子的位置确定此子可以落的范围。上一子相对于它所在的大格的位置，就是这一子允许落的大格相对于整个棋盘的位置。比如下面的对局中，第一子是蓝色 O，它相对于它所在的大格而言是中间行的右侧位置，所以第二子红色 X 允许落在的范围是相对于整个棋盘而言的中间行的右侧的大格，即图中的蓝色方框。同理，当第二子确定它的位置后，得到第三子允许落的位置范围是图中的红色方框。
 
-    ![example.jpg](https://github.com/FLOW2090/CODE_CPP/blob/main/ComputationnalThinking/example.jpg)
+    ![example.jpg](https://github.com/FLOW2090/MCTS/blob/main/example.jpg)
 
     4. 如果按照 iii 的要求，将要落的子所允许的范围内已经落满子，但其他大格中还有空格，那么本次落子就可以在任意一个空的网格上落子。
 
@@ -35,4 +35,4 @@
 
 ## 帮助理解代码框架的说明
 
-[display.jpg](https://github.com/FLOW2090/CODE_CPP/blob/main/ComputationnalThinking/display.jpg)
+[display.jpg](https://github.com/FLOW2090/MCTS/blob/main/display.jpg)
