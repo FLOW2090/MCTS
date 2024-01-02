@@ -114,7 +114,7 @@ struct game {
         }
         // no winner
     }
-    char terminated() {/*  */
+    char terminated() {
         // check row
         for (int i = 0; i < 3; i++) {
             if (bigBoard.b[i][0] != ' ' && bigBoard.b[i][0] != 'D' && bigBoard.b[i][0] == bigBoard.b[i][1] && bigBoard.b[i][0] == bigBoard.b[i][2]) {
