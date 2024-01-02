@@ -48,7 +48,7 @@ struct board {
 };
 
 struct game {
-    char lastPiece = 'O'; // suppose the robot places first
+    char lastPiece = 'O'; // suppose the robot(or X/*  */) places first
     int lastX = -1, lastY = -1; // the position of last time in the smallBoard 
     int lastBX = -1, lastBY = -1; // the position of last time in the bigBoard (to mark which block to be updated)
     board bigBoard;
@@ -114,7 +114,7 @@ struct game {
         }
         // no winner
     }
-    char terminated() {
+    char terminated() {/*  */
         // check row
         for (int i = 0; i < 3; i++) {
             if (bigBoard.b[i][0] != ' ' && bigBoard.b[i][0] != 'D' && bigBoard.b[i][0] == bigBoard.b[i][1] && bigBoard.b[i][0] == bigBoard.b[i][2]) {

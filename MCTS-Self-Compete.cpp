@@ -262,6 +262,7 @@ using nodePosi = node*;
 const int C = 2;
 const int MAX_PLAY_TIME1 = 500;
 const int MAX_PLAY_TIME2 = 5000;
+const int MAX_PLAY_TIME = 1000;
 
 // global variables
 int totalTimes = 0;
@@ -377,7 +378,7 @@ int main() {
         startTime = clock();
         while (true) { // X plays less than O
             totalTimes = 0;
-            while (totalTimes++ < MAX_PLAY_TIME1) {
+            while (totalTimes++ < MAX_PLAY_TIME) {
                 MCTS('X');
             }
             children = root[0]->children;
@@ -401,7 +402,7 @@ int main() {
             }
 
             totalTimes = 0;
-            while (totalTimes++ < MAX_PLAY_TIME2) {
+            while (totalTimes++ < MAX_PLAY_TIME) {
                 MCTS('O');
             }
             children = root[0]->children;
