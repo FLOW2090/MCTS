@@ -48,7 +48,7 @@ struct board {
 };
 
 struct game {
-    char lastPiece = 'O'; // suppose the robot(or X/*  */) places first
+    char lastPiece = 'O'; // suppose the robot(or X) places first
     int lastX = -1, lastY = -1; // the position of last time in the smallBoard 
     int lastBX = -1, lastBY = -1; // the position of last time in the bigBoard (to mark which block to be updated)
     board bigBoard;
