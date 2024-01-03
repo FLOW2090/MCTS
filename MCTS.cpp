@@ -346,8 +346,8 @@ void MCTS() {
         vector<nodePosi> children = search->children;
         search = pickMaxUCB(children);
     }
-    // if haven't played, then expand
-    if (search->playedTimes == 0) {
+    // if have been played, then expand
+    if (search->playedTimes != 0) {
         search = enumerate(search);
     }
     // play
