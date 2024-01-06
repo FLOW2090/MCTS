@@ -352,7 +352,7 @@ void MCTS(char dest) {
         search = pickMaxUCB(children);
     }
     // if haven't played, then expand
-    if (search->playedTimes == 0) {
+    if (search->playedTimes == 0 && search->g->placeNum() != 0) {
         search = enumerate(search);
     }
     // play
